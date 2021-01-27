@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_guid">
+        <item>ACLEDA BANK</item>
+        <item>AMK BANK</item>
+    </string-array>
+    <string-array name="currencies">
+        <item>KHR</item>
+        <item>USD</item>
+        <item>THB</item>
+    </string-array>
+</resources>

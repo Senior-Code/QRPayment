@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lighterseablue"
+
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/txt1"
+            android:textAlignment="center"
+            android:hint="Click the button to go to \n EMVCode Generator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_gravity="center"
+            android:id="@+id/btn1"
+            android:background="@drawable/round_button"
+            android:text="Go to Generator"
+            android:textColor="@color/white"
+            android:layout_width="150dp"
+
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+
+</ScrollView>

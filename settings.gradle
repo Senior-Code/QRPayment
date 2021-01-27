@@ -1,0 +1,3 @@
+include ':EMVCo'
+include ':app'
+rootProject.name = "QRPayment"

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighterseablue"
+    tools:context=".Emvactivity">
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT BANK METHOD"/>
+        <Spinner
+            android:id="@+id/guid_spn"
+            android:entries="@array/bank_guid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <EditText
+            android:id="@+id/merchantid_edt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Input Merchant ID"/>
+        <EditText
+            android:id="@+id/categorycode_edt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Input Merchant Category Code"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:text="SELECT CURRENCY" />
+
+        <LinearLayout
+            android:layout_gravity="fill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/currency_spn"
+                android:entries="@array/currencies"
+                android:layout_width="200dp"
+                android:layout_height="50dp"/>
+            <EditText
+                android:id="@+id/totalamount_edt"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:hint="Input total amount"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/merchantcity_edt"
+            android:layout_width="match_parent"
+            android:hint="Input Merchant City"
+            android:layout_height="50dp"/>
+        <EditText
+            android:id="@+id/identitycode_edt"
+            android:layout_width="match_parent"
+            android:hint="Input Identity Code"
+            android:layout_height="50dp"/>
+        <EditText
+            android:id="@+id/customernumber_edt"
+            android:layout_width="match_parent"
+            android:hint="Input Customer Number"
+            android:layout_height="50dp"/>
+        <EditText
+            android:id="@+id/merchantname_edt"
+            android:layout_width="match_parent"
+            android:hint="Input Merchant Name"
+            android:layout_height="50dp"/>
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/txtresult"
+            android:layout_gravity="center"
+            android:text="EMVco Code here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/round_button"
+            android:id="@+id/generator_btn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="Generate QR Code"/>
+        </LinearLayout>
+        </LinearLayout>
+
+
+</ScrollView>
