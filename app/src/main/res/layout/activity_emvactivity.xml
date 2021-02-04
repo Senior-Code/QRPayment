@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -56,49 +55,68 @@
                 android:layout_height="50dp"
                 android:hint="Input total amount"/>
         </LinearLayout>
+
         <EditText
             android:id="@+id/merchantcity_edt"
             android:layout_width="match_parent"
             android:hint="Input Merchant City"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
+
         <EditText
             android:id="@+id/identitycode_edt"
             android:layout_width="match_parent"
             android:hint="Input Identity Code"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
+
         <EditText
             android:id="@+id/customernumber_edt"
             android:layout_width="match_parent"
             android:hint="Input Customer Number"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
+
         <EditText
             android:id="@+id/merchantname_edt"
             android:layout_width="match_parent"
             android:hint="Input Merchant Name"
-            android:layout_height="50dp"/>
-        <TextView
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:id="@+id/txtresult"
-            android:layout_gravity="center"
-            android:text="EMVco Code here"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="50dp" />
+
         <LinearLayout
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp">
-        <androidx.appcompat.widget.AppCompatButton
-            android:background="@drawable/round_button"
-            android:id="@+id/generator_btn"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:text="Generate QR Code"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/generator_btn"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="Generate QR Code"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtqrresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="QR result here"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imgview"
+                android:layout_width="300dp"
+                android:layout_height="300dp" />
         </LinearLayout>
+    </LinearLayout>
 
 
 </ScrollView>
