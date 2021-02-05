@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':QRPayment')
+    implementation project(path: ':KH_QRcode')
     compileOnly 'org.projectlombok:lombok:1.18.18'
     annotationProcessor 'org.projectlombok:lombok:1.18.18'
     testCompileOnly 'org.projectlombok:lombok:1.18.18'
