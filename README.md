@@ -130,7 +130,8 @@ Add it in your root build.gradle at the end of repositories:
   
     QRPayment qrpayment = new QRPayment;
     InputStream inputStream = getresources.openRawResource(R.raw.configfee); //config fee is file name
-    val inputStream: InputStream = resources.openRawResource(R.raw.configfee) // for Kotlin code
+    // For Kotlin use this
+    val inputStream: InputStream = resources.openRawResource(R.raw.configfee) 
     qrpayment.setFilePath(inputStream);
     ```
   
