@@ -38,14 +38,14 @@ QRPayment is an Java library for Android to generate QRcode in accordance to EMV
 * You need to pass some parameters such as *ImageView*, *EMVcode*, *Width*, *Height* into the function.
 * *EMVcode* is the String text which is generated from **generateText()**. You can put the text in another String and call the String in *EMVcode* parameters.
   
-```java
-import com.emv.qrpayment.encoder.QRPayment;
+  ```java
+  import com.emv.qrpayment.encoder.QRPayment;
 
-QRPayment qrpayment = new QRPayment;
-String emvcode = qrpayment.generateText();
-qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, height: height);
+  QRPayment qrpayment = new QRPayment;
+  String emvcode = qrpayment.generateText();
+  qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, height: height);
 
-```
+  ```
   
 ### SetFilePath
   
@@ -62,13 +62,13 @@ qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, he
   
   * To pass the file to FilePath, simply create an InputStream to read the file from resource folder and pass the InputStream parameters to **setFilePath()** 
   
-```java
-import com.emv.qrpayment.encoder.QRPayment;
+    ```java
+    import com.emv.qrpayment.encoder.QRPayment;
   
-QRPayment qrpayment = new QRPayment;
-InputStream inputStream = getresources.openRawResource(R.raw.configfee); //config fee is file name
-qrpayment.setFilePath(inputStream);
+    QRPayment qrpayment = new QRPayment;
+    InputStream inputStream = getresources.openRawResource(R.raw.configfee); //config fee is file name
+    qrpayment.setFilePath(inputStream);
 
-```
+    ```
   
 
