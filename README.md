@@ -2,9 +2,11 @@
   QRPayment is an Java library for Android to generate QRcode in accordance to EMVco standard as well as KH QRcode standard.
 ## Function
   * **setPayment()** this function is used to set payment to the code.
-    * ***parameter*** <span style="color:grey">acquirerID</span>, <span style="color:grey">mercahntID</span>, <span style="color:grey">categoryCode</span>, <span style="color:grey">currencyCode</span>, <span style="color:grey">transactionAmount</span>, <span style="color:grey">identityCode</span>, <span style="color:grey">customerNumber</span>, <span style="color:grey">merchantName</span>, <span style="color:grey">merchantCity</span>
+    * ***parameters:*** *acquirerID*, *mercahntID*, *categoryCode*, *currencyCode*, *transactionAmount*, *identityCode*, *customerNumber*, *merchantName*, *merchantCity*
   * **generateText()** generateText() is used to generate QR code as EMVco text format.
+    * this function is automatically generated from **setPayment()**
   * **generateImage()** generateImage() is used to generate QR code as QR image.
-  * **setFilePath()** setFilePath() is used to give fee condition to your QR code and EMV code.
-### setFilePath
+    * in generateImage() function, you need to pass some parameters such as *ImageView*, *EMVcode*, *Width*, *Height*
+    * *EMVcode* is the String text which is generated from **generateText()**. You can put the text in another String and call the String in *EMVcode* parameters
+  * **setFilePath()** is used to give fee condition to your QR code and EMV code.
 ## Installation
