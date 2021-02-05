@@ -1,4 +1,4 @@
-## QRPayment  ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/Senior-Code/QRPayment?include_prereleases)
+## QRPAYMENT  ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/Senior-Code/QRPayment?include_prereleases)
 
 QRPayment is an Java library for Android to generate QRcode in accordance to EMVco standard as well as KH QRcode standard.
   
