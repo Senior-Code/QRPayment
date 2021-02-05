@@ -1,4 +1,4 @@
-## QRPayment  [![](https://jitpack.io/v/Senior-Code/QRPayment.svg)](https://jitpack.io/#Senior-Code/QRPayment)
+## QRPayment  [![](https://jitpack.io/v/Senior-Code/QRPayment.svg)](https://jitpack.io/#Senior-Code/QRPayment) 
 
 QRPayment is an Java library for Android to generate QRcode in accordance to EMVco standard as well as KH QRcode standard.
   
@@ -20,6 +20,27 @@ QRPayment is an Java library for Android to generate QRcode in accordance to EMV
 
 ## Installation
 
+**Step 1** Add the JitPack repository to your build file
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+**Step 2** Add the dependency
+
+```
+	dependencies {
+	        implementation 'com.github.Senior-Code:QRPayment:0.0.2'
+	}
+```
+
 ## Function
 
 ### SetPayment 
@@ -27,10 +48,48 @@ QRPayment is an Java library for Android to generate QRcode in accordance to EMV
   **setPayment()** this function is used to set payment to the code.
   * ***parameters:*** *acquirerID*, *mercahntID*, *categoryCode*, *currencyCode*, *transactionAmount*, *identityCode*, *customerNumber*, *merchantName*, *merchantCity*
   
+  ```java
+  import com.emv.qrpayment.encoder.QRPayment;
+
+  // call QRPayment library
+  QRPayment qrpayment = new QRPayment;
+  // set value to your QRcode using setPayment()
+  qrpayment.setPayment(
+      acquirerID: acquirerID, 
+      merchantID: merchantID, 
+      categoryCode: categoryCode, 
+      currencyCode: currencyCode, 
+      transactionAmount: TotalAmount, 
+      identityCode: billNumber, 
+      customerNumber: customerNumber, 
+      merchantName: merchantName, 
+      merchantCity: MerchantCity);
+  qrayment.generateText(); // generate your setPayment as text in EMVco standard
+  qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, height: height); //generate QR code image
+
+  ```
+  
 ### GenerateText
   
 **generateText()** generateText() is used to generate QR code as EMVco text format.
 * this function is automatically generated from **setPayment()**
+
+```java
+  import com.emv.qrpayment.encoder.QRPayment;
+
+  QRPayment qrpayment = new QRPayment;
+  qrpayment.setPayment(
+      acquirerID: acquirerID, 
+      merchantID: merchantID, 
+      categoryCode: categoryCode, 
+      currencyCode: currencyCode, 
+      transactionAmount: TotalAmount, 
+      identityCode: billNumber, 
+      customerNumber: customerNumber, 
+      merchantName: merchantName, 
+      merchantCity: MerchantCity);
+  String emv = qr.payment.generateText() //output EMVco code as String
+  ```
   
 ### GenerateImage
   
@@ -43,8 +102,12 @@ QRPayment is an Java library for Android to generate QRcode in accordance to EMV
 
   QRPayment qrpayment = new QRPayment;
   String emvcode = qrpayment.generateText();
-  qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, height: height);
-
+  // set this function to your ImageView to display QR Code
+  qrpayment.generateImage( 
+      imageview: ImageView, //assign your ImageView to here
+      emvcode: emvcode, //String EMV code that generate from generateText()
+      width: width, // set your QR image width and height
+      height: height); 
   ```
   
 ### SetFilePath
@@ -68,7 +131,6 @@ QRPayment is an Java library for Android to generate QRcode in accordance to EMV
     QRPayment qrpayment = new QRPayment;
     InputStream inputStream = getresources.openRawResource(R.raw.configfee); //config fee is file name
     qrpayment.setFilePath(inputStream);
-
     ```
   
 
