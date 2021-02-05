@@ -27,7 +27,6 @@ import java.util.HashMap;
 
 import kotlin.jvm.internal.Intrinsics;
 
-
 public class QRPayment {
     private InputStream inputStream;
     private String acquirerID;

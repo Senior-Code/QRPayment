@@ -67,24 +67,24 @@ class Emvactivity : AppCompatActivity() {
                     transactioncurrency = "764" //THB
                 }
             }
-            var merchantCategoryCode: String
+            val merchantCategoryCode: String
             if (_merchantcategorycodeedt.text.isEmpty()){
                 merchantCategoryCode = "4900"
             } else {
                 merchantCategoryCode = _merchantcategorycodeedt.text.toString()
             }
             QRPayment.setPayment(
-                GUID,
-                _merchantidedt.text.toString(),
-                merchantCategoryCode,
-                transactioncurrency,
-                _totalamountedt.text.toString(),
-                _identitycodeedt.text.toString(),
-                _customernoedt.text.toString(),
-                _merchantnameedt.text.toString(),
-                _merchantcity.text.toString()
+                    GUID,
+                    _merchantidedt.text.toString(),
+                    merchantCategoryCode,
+                    transactioncurrency,
+                    _totalamountedt.text.toString(),
+                    _identitycodeedt.text.toString(),
+                    _customernoedt.text.toString(),
+                    _merchantnameedt.text.toString(),
+                    _merchantcity.text.toString()
             )
-            var emvcode = QRPayment.generateText()
+            val emvcode = QRPayment.generateText()
             _txtresult.text = emvcode
             QRPayment.generateImage(_imgview, emvcode, 300, 300)
         }
