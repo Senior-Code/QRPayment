@@ -6,14 +6,12 @@
   <ol>
     <li>
       <a href="#function">Function</a>
-      <ol>
         <ul>
           <li><a href="#setpayment">setPayment()</a></li>
           <li><a href="#generatetext">generateText()</a></li>
           <li><a href="#generateimage">generateImage()</a></li>
           <li><a href="#setfilepath">setFilePath()</a></li>
         </ul>
-      </ol>
     </li>
     <li><a href="#installation">Installation</a></li>
   </ol>
@@ -27,10 +25,19 @@
   **generateText()** generateText() is used to generate QR code as EMVco text format.
   * this function is automatically generated from **setPayment()**
   ### GenerateImage
-  **generateImage()** generateImage() is used to generate QR code as QR image.
-  * in generateImage() function, you need to pass some parameters such as *ImageView*, *EMVcode*, *Width*, *Height*
+  **generateImage()** is used to generate QR code as QR image.
+  * You need to pass some parameters such as *ImageView*, *EMVcode*, *Width*, *Height* into the function.
   * *EMVcode* is the String text which is generated from **generateText()**. You can put the text in another String and call the String in *EMVcode* parameters.
+  ```java
+  import com.emv.qrpayment.encoder.QRPayment;
+  
+  QRPayment qrpayment = new QRPayment;
+  String emvcode = qrpayment.generateText();
+  qrpayment.generateImage(imageview: ImageView, emvcode: emvcode, width: width, height: height);
+  ```
   ### SetFilePath
   **setFilePath()** is used to give fee condition to your QR code and EMV code.
   * You need to download [configfee.csv](https://mega.nz/file/dQ8BDIKY#b7FDQu2eRI5qGFMvM1kd_HZ2iQHEWpssY7Q6agp0YTk) into your project resources directory and call InputStream method to pass the csv file into **setFilePath()**.
+    * In your android project directory, you need to create a new Android Resources Directory and put its Resource type to raw.
+  * After you download the file, simply paste the file into res/raw/ in your project directory.
 ## Installation
